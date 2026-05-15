@@ -1,0 +1,243 @@
+:root {
+    --bg: #f6f8fb;
+    --page-bg: linear-gradient(180deg, #f8fbff, #f6f8fb);
+    --text: #0f1724;
+    --muted: #6b7280;
+    --card: #ffffff;
+    --accent: #0b3d91;
+    --accent-2: #00a3ff;
+    --radius: 12px;
+    --spacing: 1rem;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    margin: 0;
+    color: var(--text);
+    background: var(--page-bg);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.85rem 1rem;
+    background: linear-gradient(90deg, #0f172a, var(--accent));
+    color: #fff;
+    box-shadow: 0 6px 18px rgba(11, 61, 145, 0.08);
+}
+
+.site-header .brand a {
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 1.25rem;
+    letter-spacing: .2px;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem
+}
+
+.main-nav a {
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+    padding: 0.45rem 0.6rem;
+    border-radius: 8px;
+    transition: all .18s ease;
+}
+
+.main-nav a:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-1px)
+}
+
+.main-nav .spacer {
+    flex: 1
+}
+
+.main-nav .welcome {
+    opacity: 0.9;
+    padding: 0 0.5rem
+}
+
+main {
+    padding: var(--spacing);
+    max-width: 1100px;
+    margin: 1.25rem auto;
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+.card {
+    background: var(--card);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+    padding: 1rem
+}
+
+.card.huge {
+    padding: 1.6rem
+}
+
+.muted {
+    color: var(--muted)
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .55rem .9rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600
+}
+
+.btn.ghost {
+    background: transparent;
+    border: 1px solid rgba(11, 61, 145, 0.12);
+    color: var(--accent)
+}
+
+.btn.secondary {
+    background: var(--muted);
+    box-shadow: none
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem
+}
+
+.site-footer {
+    margin-top: 0;
+    background: linear-gradient(180deg, rgba(15, 23, 36, 0.02), transparent);
+    padding: 1rem 0;
+    margin-top: auto
+}
+
+.site-footer .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted)
+}
+
+.footer-note {
+    font-size: .9rem
+}
+
+.site-footer .links a {
+    color: var(--muted);
+    margin-right: 1rem;
+    text-decoration: none
+}
+
+.error {
+    color: #b00020
+}
+
+/* small utilities */
+.text-center {
+    text-align: center
+}
+
+
+/* Theme overrides per role */
+.admin-theme .site-header {
+    background: linear-gradient(90deg, #2d0f36, #6a1b9a)
+}
+
+.creator-theme .site-header {
+    background: linear-gradient(90deg, #0b3d91, #00a3ff)
+}
+
+.member-theme .site-header {
+    background: linear-gradient(90deg, #0b6623, #10b981)
+}
+
+/* Dashboard lists */
+ul.dashboard-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap
+}
+
+ul.dashboard-list li {
+    list-style: none
+}
+
+ul.dashboard-list a {
+    display: block;
+    padding: .8rem 1rem;
+    background: linear-gradient(180deg, #fff, #f8fafc);
+    border-radius: 8px;
+    border: 1px solid #e6eef8;
+    color: var(--text);
+    text-decoration: none
+}
+
+@media (max-width:768px) {
+    .main-nav ul {
+        flex-wrap: wrap
+    }
+
+
+    /* Auth pages (login / register) */
+    .auth-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(180deg, #eef2ff, #f8fafc)
+    }
+
+    .auth-page main {
+        max-width: 520px;
+        width: 100%;
+        padding: 1rem
+    }
+
+    .auth-page .form-card {
+        margin: 0
+    }
+
+    /* Utility */
+    .muted {
+        color: var(--muted)
+    }
+
+    .site-header {
+        padding: 0.6rem
+    }
+
+    main {
+        padding: 0.6rem;
+        margin: 0.6rem
+    }
+}
