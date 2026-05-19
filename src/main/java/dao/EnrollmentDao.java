@@ -47,10 +47,17 @@ public class EnrollmentDao {
     }
 
     public void enroll(int courseId, int userId) throws SQLException {
-        String sql = "INSERT IGNORE INTO enrollments (course_id, user_id) VALUES (?, ?)";
+        enroll(courseId, userId, "free", 0.0);
+    }
+
+    public void enroll(int courseId, int userId, String paymentStatus, double amountPaid) throws SQLException {
+        String sql = "INSERT INTO enrollments (course_id, user_id, payment_status, amount_paid) VALUES (?, ?, ?, ?) "
+                + "ON DUPLICATE KEY UPDATE payment_status = VALUES(payment_status), amount_paid = VALUES(amount_paid)";
         try (Connection c = DBConnectionUtil.getConnection(); PreparedStatement ps = c.prepareStatement(sql)) {
             ps.setInt(1, courseId);
             ps.setInt(2, userId);
+            ps.setString(3, paymentStatus);
+            ps.setDouble(4, amountPaid);
             ps.executeUpdate();
         }
     }

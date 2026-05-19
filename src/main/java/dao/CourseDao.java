@@ -22,13 +22,15 @@ public class CourseDao {
     }
 
     public int create(Course course) throws SQLException {
-        String sql = "INSERT INTO courses (community_id, title, description, creator_id) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO courses (community_id, title, description, is_paid, price, creator_id) VALUES (?, ?, ?, ?, ?, ?)";
         try (Connection c = DBConnectionUtil.getConnection();
                 PreparedStatement ps = c.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             ps.setInt(1, course.getCommunityId());
             ps.setString(2, course.getTitle());
             ps.setString(3, course.getDescription());
-            ps.setInt(4, course.getCreatorId());
+            ps.setBoolean(4, course.isPaid());
+            ps.setDouble(5, course.getPrice());
+            ps.setInt(6, course.getCreatorId());
             int affected = ps.executeUpdate();
             if (affected == 0)
                 throw new SQLException("Creating course failed");

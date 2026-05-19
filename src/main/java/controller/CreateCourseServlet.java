@@ -66,6 +66,21 @@ public class CreateCourseServlet extends HttpServlet {
 
         String title = req.getParameter("title");
         String description = req.getParameter("description");
+        boolean isPaid = req.getParameter("is_paid") != null;
+        double price = 0.0;
+        String priceParam = req.getParameter("price");
+        if (isPaid) {
+            try {
+                price = Double.parseDouble(priceParam);
+            } catch (Exception ex) {
+                resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Please enter a valid price");
+                return;
+            }
+            if (price <= 0.0) {
+                resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "Paid courses need a price above zero");
+                return;
+            }
+        }
         int communityId;
         try {
             communityId = Integer.parseInt(req.getParameter("community_id"));
@@ -89,6 +104,8 @@ public class CreateCourseServlet extends HttpServlet {
             c.setCommunityId(communityId);
             c.setTitle(title);
             c.setDescription(description);
+            c.setPaid(isPaid);
+            c.setPrice(isPaid ? price : 0.0);
             c.setCreatorId(u.getId());
             int courseId = dao.create(c);
 

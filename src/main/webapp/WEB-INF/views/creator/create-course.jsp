@@ -1,118 +1,112 @@
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<%-- Common header section used across creator pages --%>
-<jsp:include page="/WEB-INF/views/includes/header.jsp" />
+        <%-- Common header section used across creator pages --%>
+            <jsp:include page="/WEB-INF/views/includes/header.jsp" />
 
-<main class="page-frame">
+            <main class="page-frame">
 
-    <!-- Page introduction -->
-    <section class="page-hero">
-        <h1>Create Course</h1>
+                <!-- Page introduction -->
+                <section class="page-hero">
+                    <h1>Create Course</h1>
 
-        <p class="lede">
-            Publish a course under your community and optionally upload a launch video during setup.
-        </p>
-    </section>
+                    <p class="lede">
+                        Publish a course under your community and optionally upload a launch video during setup.
+                    </p>
+                </section>
 
-    <!-- Main course creation form -->
-    <section class="section-card">
+                <!-- Main course creation form -->
+                <section class="section-card">
 
-        <%-- Multipart form required for video uploads --%>
-        <form method="post"
-              enctype="multipart/form-data"
-              class="course-create-form">
+                    <%-- Multipart form required for video uploads --%>
+                        <form method="post" enctype="multipart/form-data" class="course-create-form">
 
-            <!-- Course title -->
-            <div class="form-group">
-                <label for="title">Title</label>
+                            <!-- Course title -->
+                            <div class="form-group">
+                                <label for="title">Title</label>
 
-                <input
-                        type="text"
-                        id="title"
-                        name="title"
-                        placeholder="Enter course title"
-                        required
-                />
-            </div>
+                                <input type="text" id="title" name="title" placeholder="Enter course title" required />
+                            </div>
 
-            <!-- Course description -->
-            <div class="form-group">
-                <label for="description">Description</label>
+                            <!-- Course description -->
+                            <div class="form-group">
+                                <label for="description">Description</label>
 
-                <textarea
-                        id="description"
-                        name="description"
-                        rows="5"
-                        placeholder="Write a short overview of the course"
-                ></textarea>
-            </div>
+                                <textarea id="description" name="description" rows="5"
+                                    placeholder="Write a short overview of the course"></textarea>
+                            </div>
 
-            <!-- Community selection -->
-            <div class="form-group">
-                <label for="community_id">Community</label>
+                            <div class="form-group">
+                                <label for="is_paid">Pricing</label>
+                                <div style="display:flex; flex-direction:column; gap:0.5rem;">
+                                    <label>
+                                        <input type="checkbox" id="is_paid" name="is_paid" value="true" />
+                                        Mark this course as paid
+                                    </label>
+                                    <input type="number" id="price" name="price" min="0" step="0.01"
+                                        placeholder="Course price in NPR" />
+                                    <small class="muted">
+                                        Leave it unchecked to keep the course free. Paid courses must have a price above
+                                        zero.
+                                    </small>
+                                </div>
+                            </div>
 
-                <select
-                        id="community_id"
-                        name="community_id"
-                        required
-                >
-                    <option value="">
-                        Select a community
-                    </option>
+                            <!-- Community selection -->
+                            <div class="form-group">
+                                <label for="community_id">Community</label>
 
-                    <%-- Dynamically load creator communities --%>
-                    <c:forEach var="community" items="${communities}">
-                        <option value="${community.id}">
-                            ${community.name}
-                        </option>
-                    </c:forEach>
+                                <select id="community_id" name="community_id" required>
+                                    <option value="">
+                                        Select a community
+                                    </option>
 
-                </select>
-            </div>
+                                    <%-- Dynamically load creator communities --%>
+                                        <c:forEach var="community" items="${communities}">
+                                            <option value="${community.id}">
+                                                ${community.name}
+                                            </option>
+                                        </c:forEach>
 
-            <!-- Optional course intro video -->
-            <div class="form-group">
+                                </select>
+                            </div>
 
-                <label for="video_file">
-                    Optional Course Video
-                </label>
+                            <!-- Optional course intro video -->
+                            <div class="form-group">
 
-                <input
-                        id="video_file"
-                        type="file"
-                        name="video_file"
-                        accept="video/*,.mp4,.webm,.ogg,.mov,.mkv"
-                />
+                                <label for="video_file">
+                                    Optional Course Video
+                                </label>
 
-                <small class="muted">
-                    Upload a video now if you want it attached immediately after course creation.
-                </small>
+                                <input id="video_file" type="file" name="video_file"
+                                    accept="video/*,.mp4,.webm,.ogg,.mov,.mkv" />
 
-            </div>
+                                <small class="muted">
+                                    Upload a video now if you want it attached immediately after course creation.
+                                </small>
 
-            <!-- Form actions -->
-            <div class="form-actions">
+                            </div>
 
-                <%-- Submit course details --%>
-                <button type="submit">
-                    Create
-                </button>
+                            <!-- Form actions -->
+                            <div class="form-actions">
 
-                <%-- Navigate back to creator dashboard --%>
-                <a
-                        class="secondary-link"
-                        href="${pageContext.request.contextPath}/creator/dashboard"
-                >
-                    Cancel
-                </a>
+                                <%-- Submit course details --%>
+                                    <button type="submit">
+                                        Create
+                                    </button>
 
-            </div>
+                                    <%-- Navigate back to creator dashboard --%>
+                                        <a class="secondary-link"
+                                            href="${pageContext.request.contextPath}/creator/dashboard">
+                                            Cancel
+                                        </a>
 
-        </form>
+                            </div>
 
-    </section>
-</main>
+                        </form>
 
-<%-- Shared footer include --%>
-<jsp:include page="/WEB-INF/views/includes/footer.jsp" />
+                </section>
+            </main>
+
+            <%-- Shared footer include --%>
+                <jsp:include page="/WEB-INF/views/includes/footer.jsp" />

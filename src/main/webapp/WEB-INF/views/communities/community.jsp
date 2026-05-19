@@ -45,6 +45,12 @@
                             href="${pageContext.request.contextPath}/courses/view?course_id=${course.id}">
                             <h3 class="resource-title">${course.title}</h3>
                             <p>${course.description}</p>
+                            <p class="resource-meta">
+                                <c:choose>
+                                    <c:when test="${course.paid}">NPR ${course.price}</c:when>
+                                    <c:otherwise>Free</c:otherwise>
+                                </c:choose>
+                            </p>
                         </a>
                     </c:forEach>
                     <c:if test="${empty courses}">

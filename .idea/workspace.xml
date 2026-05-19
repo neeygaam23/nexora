@@ -10,18 +10,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5cd869d3-0efc-4aea-b912-ae0851670025" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/AdminManageUsersServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/AdminManageUsersServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/CommentServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/CommentServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/DeleteCommunityServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/DeleteCommunityServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/DeleteCourseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/DeleteCourseServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/MyEnrollmentsServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/MyEnrollmentsServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/PostServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/PostServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/CommentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/CommentDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/PostDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/PostDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/ProgressDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/ProgressDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/model/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/model/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/model/Post.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/model/Post.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/model/Progress.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/model/Progress.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CourseViewServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CourseViewServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CreateCourseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CreateCourseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MaterialDownloadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MaterialDownloadServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CourseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/EnrollmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/EnrollmentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/communities/community.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/communities/community.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/browse-courses.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/browse-courses.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/view-course.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/view-course.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/creator/create-course.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/creator/create-course.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,6 +224,8 @@
       <workItem from="1778997061420" duration="233000" />
       <workItem from="1779158629679" duration="1590000" />
       <workItem from="1779161964273" duration="122000" />
+      <workItem from="1779180473316" duration="157000" />
+      <workItem from="1779180695518" duration="672000" />
     </task>
     <servers />
   </component>
