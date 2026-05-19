@@ -1,45 +1,45 @@
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<!-- Shared header section -->
+<!-- include header -->
 <jsp:include page="/WEB-INF/views/includes/header.jsp" />
 
 <main class="page-frame">
 
-    <!-- Community information banner -->
+    <!-- community header section -->
     <section class="page-hero">
 
-        <!-- Community title -->
+        <!-- community name -->
         <h1>${community.name}</h1>
 
-        <!-- Community description -->
+        <!-- community description -->
         <p class="lede">${community.description}</p>
 
-        <!-- Action buttons section -->
+        <!-- action buttons -->
         <div class="hero-actions">
 
-            <!-- Check whether user is logged in -->
+            <!-- check login status -->
             <c:choose>
 
-                <!-- Logged in user -->
+                <!-- if user is logged in -->
                 <c:when test="${not empty sessionScope.currentUser}">
 
-                    <!-- Check if current user is already a member -->
+                    <!-- check membership -->
                     <c:choose>
 
-                        <!-- User is already a member -->
+                        <!-- if already member -->
                         <c:when test="${isMember}">
 
-                            <!-- Leave community form -->
+                            <!-- leave community -->
                             <form method="post"
                                   action="${pageContext.request.contextPath}/communities/leave">
 
-                                <!-- Hidden field to send community ID -->
+                                <!-- community id -->
                                 <input type="hidden"
                                        name="community_id"
                                        value="${community.id}" />
 
-                                <!-- Leave button -->
+                                <!-- leave button -->
                                 <button type="submit" class="btn secondary-btn">
                                     Leave Community
                                 </button>
@@ -47,19 +47,19 @@
 
                         </c:when>
 
-                        <!-- User is not a member -->
+                        <!-- if not a member -->
                         <c:otherwise>
 
-                            <!-- Join community form -->
+                            <!-- join community -->
                             <form method="post"
                                   action="${pageContext.request.contextPath}/communities/join">
 
-                                <!-- Hidden field for selected community -->
+                                <!-- community id -->
                                 <input type="hidden"
                                        name="community_id"
                                        value="${community.id}" />
 
-                                <!-- Join button -->
+                                <!-- join button -->
                                 <button type="submit" class="btn">
                                     Join Community
                                 </button>
@@ -68,7 +68,7 @@
                         </c:otherwise>
                     </c:choose>
 
-                    <!-- Link to community discussions -->
+                    <!-- view discussions link -->
                     <a href="${pageContext.request.contextPath}/communities/posts?community_id=${community.id}"
                        class="btn secondary-btn">
                         View Discussions
@@ -76,16 +76,16 @@
 
                 </c:when>
 
-                <!-- Guest user section -->
+                <!-- if user not logged in -->
                 <c:otherwise>
 
-                    <!-- Redirect user to login page -->
+                    <!-- login link -->
                     <a href="${pageContext.request.contextPath}/login"
                        class="btn">
                         Login to Join
                     </a>
 
-                    <!-- Redirect user to registration page -->
+                    <!-- register link -->
                     <a href="${pageContext.request.contextPath}/register"
                        class="btn secondary-btn">
                         Create Account
@@ -96,41 +96,41 @@
         </div>
     </section>
 
-    <!-- Course listing section -->
+    <!-- courses section -->
     <section class="section-card">
 
-        <!-- Section heading -->
+        <!-- section title -->
         <div class="section-header">
             <h2>Courses</h2>
         </div>
 
-        <!-- Course cards container -->
+        <!-- course list -->
         <div class="feature-grid">
 
-            <!-- Loop through all available courses -->
+            <!-- loop courses -->
             <c:forEach var="course" items="${courses}">
 
-                <!-- Individual course card -->
+                <!-- single course card -->
                 <a class="feature-card resource-card"
                    href="${pageContext.request.contextPath}/courses/view?course_id=${course.id}">
 
-                    <!-- Course title -->
+                    <!-- course title -->
                     <h3 class="resource-title">${course.title}</h3>
 
-                    <!-- Course description -->
+                    <!-- course description -->
                     <p>${course.description}</p>
 
-                    <!-- Course pricing information -->
+                    <!-- price info -->
                     <p class="resource-meta">
 
                         <c:choose>
 
-                            <!-- Paid course -->
+                            <!-- paid course -->
                             <c:when test="${course.paid}">
                                 NPR ${course.price}
                             </c:when>
 
-                            <!-- Free course -->
+                            <!-- free course -->
                             <c:otherwise>
                                 Free
                             </c:otherwise>
@@ -142,7 +142,7 @@
 
             </c:forEach>
 
-            <!-- Message shown if no courses exist -->
+            <!-- if no courses -->
             <c:if test="${empty courses}">
                 <div class="empty-state">
                     No courses posted in this community yet.
@@ -153,5 +153,5 @@
     </section>
 </main>
 
-<!-- Shared footer section -->
+<!-- include footer -->
 <jsp:include page="/WEB-INF/views/includes/footer.jsp" />
