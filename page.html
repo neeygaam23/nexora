@@ -1,3 +1,21 @@
+
+    
+        
+    
+
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8" />
+            
+                
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+                    <title>Nexora</title>
+
+                    
+                        <style>
 :root {
     --bg: #f3f7ff;
     --page-bg: radial-gradient(circle at top right, #dce9ff 0%, #f4f8ff 45%, #eef3ff 100%);
@@ -75,99 +93,54 @@ main {
 
 .site-header {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    padding: 1rem 1.2rem;
+    gap: 1.1rem;
+    padding: 1.2rem 1.2rem;
     background: linear-gradient(90deg, #0f2140 0%, var(--accent) 100%);
     color: #fff;
     box-shadow: 0 8px 24px rgba(15, 33, 64, 0.24);
-    flex-wrap: nowrap;
-    min-height: 64px;
-}
-
-.site-header .brand {
-    display: flex;
-    align-items: center;
-    gap: 0.55rem;
-    flex: 0 0 auto;
 }
 
 .site-header .brand a {
     color: #fff;
-    font-size: 1.25rem;
+    font-size: 1.3rem;
     font-weight: 700;
     letter-spacing: 0.3px;
     text-decoration: none;
 }
 
 .main-nav {
-    flex: 1 1 auto;
-    margin-left: 0.5rem;
-    min-width: 0;
+    flex: 1;
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
     margin: 0;
     padding: 0;
-    flex-wrap: nowrap;
-    overflow: hidden;
 }
 
 .main-nav .spacer {
-    flex: 1 1 auto;
-    min-width: 1rem;
+    flex: 1;
 }
 
 .main-nav a {
     display: inline-flex;
     align-items: center;
-    padding: 0.56rem 0.9rem;
+    padding: 0.6rem 0.9rem;
     border-radius: 10px;
     color: rgba(255, 255, 255, 0.97);
     text-decoration: none;
-    transition: background-color 0.15s ease, transform 0.15s ease;
-    white-space: nowrap;
+    transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .main-nav a:hover {
     background: rgba(255, 255, 255, 0.13);
     transform: translateY(-1px);
-}
-
-/* Responsive behavior: allow wrapping on small screens */
-@media (max-width: 860px) {
-    .site-header {
-        flex-wrap: wrap;
-        padding: 0.75rem 0.9rem;
-    }
-
-    .main-nav {
-        width: 100%;
-        order: 3;
-        margin-left: 0;
-    }
-
-    .main-nav ul {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-
-    .main-nav .spacer {
-        display: none;
-    }
-
-    .site-header .brand a {
-        font-size: 1.05rem;
-    }
-
-    .main-nav a {
-        padding: 0.45rem 0.7rem;
-    }
 }
 
 .main-nav .welcome {
@@ -1297,3 +1270,308 @@ input[type="submit"]:disabled,
 }
 
 /* ===== END ROLE SELECTOR ===== */
+</style>
+<style>
+/* Auth card styles */
+.form-card {
+    max-width: 500px;
+    margin: 1.2rem auto;
+    padding: 1.3rem;
+    border-radius: 16px;
+    border: 1px solid #d9e4f4;
+    background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+    box-shadow: 0 12px 24px rgba(20, 39, 70, 0.1);
+}
+
+.form-card h1,
+.form-card h2,
+.form-card h3 {
+    margin-bottom: 0.9rem;
+}
+
+.form-card label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.95rem;
+    gap: 0.2rem;
+}
+
+.form-card form {
+    gap: 0.75rem;
+}
+
+.error-list {
+    margin-top: 0.8rem;
+    padding: 0.65rem 0.75rem;
+    border-radius: 10px;
+    background: #fff2f4;
+    border: 1px solid #f3cad1;
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+}
+
+@media (max-width: 520px) {
+    .form-card {
+        margin: 0.5rem;
+        padding: 0.9rem;
+    }
+
+    .field-row {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+        </head>
+
+        
+            
+            
+                
+                
+                    
+                        
+
+                        
+                            
+
+                            <body class="">
+
+                                
+                                    <header class="site-header">
+
+                                        
+                                            <div class="brand">
+                                                <a href="/home">Nexora</a>
+                                                
+
+                                                    <nav class="main-nav">
+                                                        <ul>
+                                                            <li><a href="/home">Home</a></li>
+
+                                                            
+
+                                                                
+
+                                                                
+                                                                    <li><a
+                                                                            href="/login">Login</a>
+                                                                    </li>
+                                                                    <li><a
+                                                                            href="/register">Register</a>
+                                                                    </li>
+                                                                
+
+                                                            
+                                                        </ul>
+                                                    </nav>
+                                    </header>
+
+        <main class="page-frame landing-page">
+            <div class="landing-orb landing-orb-one"></div>
+            <div class="landing-orb landing-orb-two"></div>
+
+            <section class="landing-hero page-hero">
+                <div class="landing-hero-copy">
+                    <span class="hero-badge">Learn. Create. Connect.</span>
+                    <h1>Nexora turns communities into living learning spaces.</h1>
+                    <p class="lede">Discover communities, join creator-led courses, and follow discussions in one
+                        platform built for modern learners and builders.</p>
+                    <div class="hero-actions">
+                        <a class="btn" href="/login">Login</a>
+                        <a class="btn secondary-btn" href="/register">Register</a>
+                        <a class="btn secondary-btn" href="/communities">Browse
+                            Communities</a>
+                    </div>
+                    <div class="hero-points">
+                        <span>Creator-led learning</span>
+                        <span>Video-ready courses</span>
+                        <span>Social discussions</span>
+                    </div>
+                </div>
+                <div class="landing-hero-panel">
+                    <div class="hero-visual-card">
+                        <div class="hero-visual-topline">Platform Snapshot</div>
+                        <div class="stat-grid">
+                            <div class="stat-card">
+                                <strong>6</strong>
+                                <span>Communities available</span>
+                            </div>
+                            <div class="stat-card">
+                                <strong>Video</strong>
+                                <span>Courses can include media</span>
+                            </div>
+                            <div class="stat-card">
+                                <strong>Live</strong>
+                                <span>Comments and reactions</span>
+                            </div>
+                        </div>
+                        <div class="hero-visual-footnote">A clean front door for learners, creators, and communities.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="feature-grid feature-grid-tight">
+                <article class="feature-card highlight-card">
+                    <h3>For New Visitors</h3>
+                    <p>Preview active communities, understand the platform, and create an account when ready.</p>
+                </article>
+                <article class="feature-card highlight-card">
+                    <h3>For Members</h3>
+                    <p>Join communities, follow courses, react to posts, and keep learning in one place.</p>
+                </article>
+                <article class="feature-card highlight-card">
+                    <h3>For Creators</h3>
+                    <p>Publish communities, upload video-backed courses, and build an audience around your content.</p>
+                </article>
+            </section>
+
+            <section class="section-card">
+                <div class="section-header">
+                    <div>
+                        <h2>Featured Communities</h2>
+                        <p>Preview what is active on Nexora. Login or register to join one.</p>
+                    </div>
+                    <a class="btn secondary-btn" href="/communities">View All</a>
+                </div>
+
+                <div class="feature-grid">
+                    
+                        <article class="feature-card resource-card community-preview-card">
+                            <div class="resource-meta">Community</div>
+                            <h3 class="resource-title">abhishek rijal</h3>
+                            <p>dfasdfasdf</p>
+                            <div class="inline-actions">
+                                <a class="btn secondary-btn"
+                                    href="/communities/view?community_id=6">Explore</a>
+                                <a class="btn" href="/login">Login to Join</a>
+                            </div>
+                        </article>
+                    
+                        <article class="feature-card resource-card community-preview-card">
+                            <div class="resource-meta">Community</div>
+                            <h3 class="resource-title">Nigam Niroula community</h3>
+                            <p>This isdfklajsflkjas df</p>
+                            <div class="inline-actions">
+                                <a class="btn secondary-btn"
+                                    href="/communities/view?community_id=5">Explore</a>
+                                <a class="btn" href="/login">Login to Join</a>
+                            </div>
+                        </article>
+                    
+                        <article class="feature-card resource-card community-preview-card">
+                            <div class="resource-meta">Community</div>
+                            <h3 class="resource-title">kafle</h3>
+                            <p>dfasfs</p>
+                            <div class="inline-actions">
+                                <a class="btn secondary-btn"
+                                    href="/communities/view?community_id=4">Explore</a>
+                                <a class="btn" href="/login">Login to Join</a>
+                            </div>
+                        </article>
+                    
+                        <article class="feature-card resource-card community-preview-card">
+                            <div class="resource-meta">Community</div>
+                            <h3 class="resource-title">Browser Test Community</h3>
+                            <p>Created from browser test by a member</p>
+                            <div class="inline-actions">
+                                <a class="btn secondary-btn"
+                                    href="/communities/view?community_id=3">Explore</a>
+                                <a class="btn" href="/login">Login to Join</a>
+                            </div>
+                        </article>
+                    
+                        <article class="feature-card resource-card community-preview-card">
+                            <div class="resource-meta">Community</div>
+                            <h3 class="resource-title">henryhub</h3>
+                            <p>This is a community for learners. </p>
+                            <div class="inline-actions">
+                                <a class="btn secondary-btn"
+                                    href="/communities/view?community_id=2">Explore</a>
+                                <a class="btn" href="/login">Login to Join</a>
+                            </div>
+                        </article>
+                    
+                        <article class="feature-card resource-card community-preview-card">
+                            <div class="resource-meta">Community</div>
+                            <h3 class="resource-title">Test Community</h3>
+                            <p>A community for testing</p>
+                            <div class="inline-actions">
+                                <a class="btn secondary-btn"
+                                    href="/communities/view?community_id=1">Explore</a>
+                                <a class="btn" href="/login">Login to Join</a>
+                            </div>
+                        </article>
+                    
+                    
+                </div>
+            </section>
+
+            <section class="section-card landing-about">
+                <div class="section-header">
+                    <h2>About Nexora</h2>
+                </div>
+                <div class="about-grid">
+                    <div>
+                        <p>Nexora helps creators publish communities and courses, while learners discover content,
+                            engage in discussions, and stay connected through a clean social learning experience.</p>
+                        <p class="muted">Creators can upload course materials and videos, and members can comment and
+                            react to posts as they learn.</p>
+                    </div>
+                    <div class="about-points">
+                        <div><strong>1</strong><span>Create a community</span></div>
+                        <div><strong>2</strong><span>Upload video-backed courses</span></div>
+                        <div><strong>3</strong><span>Grow with discussion</span></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-card">
+                <div class="section-header">
+                    <h2>What people say</h2>
+                </div>
+                <div class="testimonial-grid">
+                    <article class="testimonial-card testimonial-card-1">
+                        <p>“Nexora makes it easy to turn a small audience into a real learning community.”</p>
+                        <strong>Creator, early adopter</strong>
+                    </article>
+                    <article class="testimonial-card testimonial-card-2">
+                        <p>“The course and discussion flow feels natural. I can learn, ask, and follow up in one place.”
+                        </p>
+                        <strong>Member, active learner</strong>
+                    </article>
+                    <article class="testimonial-card testimonial-card-3">
+                        <p>“It finally gives my community a proper structure for video lessons and post-based
+                            discussion.”</p>
+                        <strong>Community builder</strong>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section-card landing-cta">
+                <h2>Ready to get started?</h2>
+                <p>Log in to continue, or create your account in a few seconds.</p>
+                <div class="hero-actions">
+                    <a class="btn" href="/login">Login</a>
+                    <a class="btn secondary-btn" href="/register">Register</a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+    <div class="footer-inner">
+        <div class="links">
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Docs</a>
+        </div>
+        <div class="copyright">&copy; 2026 Nexora University Project</div>
+    </div>
+</footer>
+</body>
+
+</html>
