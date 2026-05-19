@@ -42,6 +42,53 @@
 
         </section>
 
+        <!-- RECOMMENDED COMMUNITIES -->
+        <section class="dashboard-section">
+            <div class="section-header">
+                <h2>Recommended Communities</h2>
+                <a href="${pageContext.request.contextPath}/communities">View All</a>
+            </div>
+
+            <div class="card-grid">
+                <c:if test="${empty communities}">
+                    <p>No communities yet.</p>
+                </c:if>
+                <c:forEach var="comm" items="${communities}">
+                    <div class="community-card">
+                        <div class="card-content">
+                            <h3>${comm.name}</h3>
+                            <p>${comm.description}</p>
+                            <a href="${pageContext.request.contextPath}/communities/view?community_id=${comm.id}"
+                                class="btn primary-btn">View</a>
+                        </div>
+                    </div>
+                </c:forEach>
+            </div>
+        </section>
+
+        <!-- RECOMMENDED COURSES -->
+        <section class="dashboard-section">
+            <div class="section-header">
+                <h2>Recommended Courses</h2>
+                <a href="${pageContext.request.contextPath}/courses/browse">Browse Courses</a>
+            </div>
+
+            <div class="card-grid">
+                <c:if test="${empty enrolledCourses}">
+                    <p>You have no enrollments yet.</p>
+                </c:if>
+                <c:forEach var="course" items="${enrolledCourses}">
+                    <div class="course-card">
+                        <div class="course-info">
+                            <h3>${course.title}</h3>
+                            <p>${course.description}</p>
+                            <a href="${pageContext.request.contextPath}/courses/view?course_id=${course.id}"
+                                class="btn primary-btn">View Course</a>
+                        </div>
+                    </div>
+                </c:forEach>
+            </div>
+        </section>
 
     </main>
 
