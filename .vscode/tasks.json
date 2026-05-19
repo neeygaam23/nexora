@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Jetty 8089",
+			"type": "shell",
+			"command": "mvn",
+			"args": [
+				"-Djetty.http.port=8089",
+				"org.eclipse.jetty:jetty-maven-plugin:11.0.24:run"
+			],
+			"isBackground": true,
+			"group": "build"
+		}
+	]
+}

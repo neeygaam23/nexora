@@ -1,0 +1,2 @@
+This is a sample course material file.
+Used for testing downloads.
