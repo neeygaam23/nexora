@@ -11,7 +11,16 @@
                 <c:when test="${not empty enrolledCourses}">
                     <div class="card-grid">
                         <c:forEach var="course" items="${enrolledCourses}">
-
+                            <article class="course-card resource-card">
+                                <div class="card-content">
+                                    <h3 class="resource-title">${course.title}</h3>
+                                    <p>${course.description}</p>
+                                    <a class="btn primary-btn"
+                                        href="${pageContext.request.contextPath}/courses/view?course_id=${course.id}">
+                                        View Course
+                                    </a>
+                                </div>
+                            </article>
                         </c:forEach>
                     </div>
                 </c:when>
