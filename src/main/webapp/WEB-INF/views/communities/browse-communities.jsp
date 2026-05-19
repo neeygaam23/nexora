@@ -1,41 +1,42 @@
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
-<!-- Common header section -->
+<!-- header -->
 <jsp:include page="/WEB-INF/views/includes/header.jsp" />
 
 <main class="page-frame">
 
-    <!-- Page introduction section -->
+    <!-- page title -->
     <section class="page-hero">
         <h1>Communities</h1>
 
-        <!-- Short description shown below the heading -->
+        <!-- small intro text -->
         <p class="lede">
             Join spaces built by creators and discover active discussions around every community.
         </p>
     </section>
 
-    <!-- Community listing section -->
+    <!-- community list -->
     <section class="feature-grid">
 
-        <!-- Loop through all available communities -->
+        <!-- loop all communities -->
         <c:forEach var="comm" items="${communities}">
 
-            <!-- Each community card redirects user to community details page -->
+            <!-- single community card -->
             <a class="feature-card"
                href="${pageContext.request.contextPath}/communities/view?community_id=${comm.id}">
 
-                <!-- Community name -->
+                <!-- name -->
                 <h3>${comm.name}</h3>
 
-                <!-- Community short description -->
+                <!-- description -->
                 <p>${comm.description}</p>
+
             </a>
 
         </c:forEach>
 
-        <!-- Display message when no communities are found -->
+        <!-- if no communities -->
         <c:if test="${empty communities}">
             <div class="empty-state">
                 No communities available yet.
@@ -45,5 +46,5 @@
     </section>
 </main>
 
-<!-- Common footer section -->
+<!-- footer -->
 <jsp:include page="/WEB-INF/views/includes/footer.jsp" />
