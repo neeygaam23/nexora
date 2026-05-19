@@ -39,6 +39,8 @@ public class MaterialDownloadServlet extends HttpServlet {
                 int courseId = rs.getInt("course_id");
                 String filename = rs.getString("filename");
                 String stored = rs.getString("stored_path");
+                String contentType = getOptionalString(rs, "content_type");
+                String mediaType = getOptionalString(rs, "media_type");
 
                 User current = (User) req.getSession().getAttribute("currentUser");
                 boolean allowed = false;
@@ -68,7 +70,15 @@ public class MaterialDownloadServlet extends HttpServlet {
                     resp.sendError(HttpServletResponse.SC_NOT_FOUND);
                     return;
                 }
-                resp.setHeader("Content-Disposition", "attachment; filename=\"" + filename + "\"");
+                boolean inline = "true".equalsIgnoreCase(req.getParameter("inline"));
+                if ((contentType == null || contentType.isBlank()) && "video".equalsIgnoreCase(mediaType)) {
+                    contentType = guessContentType(filename);
+                }
+                if (contentType != null && !contentType.isBlank()) {
+                    resp.setContentType(contentType);
+                }
+                resp.setHeader("Content-Disposition",
+                        (inline ? "inline" : "attachment") + "; filename=\"" + filename + "\"");
                 resp.setContentLengthLong(f.length());
                 try (FileInputStream in = new FileInputStream(f)) {
                     in.transferTo(resp.getOutputStream());
@@ -77,5 +87,28 @@ public class MaterialDownloadServlet extends HttpServlet {
         } catch (SQLException e) {
             throw new ServletException(e);
         }
+    }
+
+    private String getOptionalString(ResultSet rs, String column) {
+        try {
+            return rs.getString(column);
+        } catch (SQLException ignored) {
+            return null;
+        }
+    }
+
+    private String guessContentType(String filename) {
+        String lower = filename == null ? "" : filename.toLowerCase();
+        if (lower.endsWith(".mp4"))
+            return "video/mp4";
+        if (lower.endsWith(".webm"))
+            return "video/webm";
+        if (lower.endsWith(".ogg"))
+            return "video/ogg";
+        if (lower.endsWith(".mov"))
+            return "video/quicktime";
+        if (lower.endsWith(".mkv"))
+            return "video/x-matroska";
+        return "application/octet-stream";
     }
 }

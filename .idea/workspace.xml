@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="nexora:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5cd869d3-0efc-4aea-b912-ae0851670025" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/servlet_api.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/conf/catalina.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/conf/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/conf/jaspic-providers.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/conf/jaspic-providers.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/conf/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/conf/server.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/conf/tomcat-users.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/conf/tomcat-users.xsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/conf/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/logs/catalina.2026-05-15.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/logs/localhost.2026-05-15.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/logs/localhost_access_log.2026-05-15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/AccessDeniedServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/AdminDashboardServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/AuthServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/CommunityListServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/CommunityViewServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/CourseViewServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/CreateCommunityServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/CreateCourseServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/CreatorDashboardServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/EnrollCourseServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/JoinCommunityServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/LeaveCommunityServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/LoginServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/LogoutServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/MaterialDownloadServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/MemberDashboardServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/RegisterServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/UnenrollCourseServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/controller/UploadMaterialServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/dao/CommunityDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/dao/CommunityMemberDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/dao/CourseDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/dao/CourseMaterialDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/dao/EnrollmentDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/dao/FollowDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/dao/UserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/filter/AuthFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/model/Community.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/model/Course.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/model/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/service/AuthService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/util/DBConnectionUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/util/PasswordUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/util/UploadUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/classes/util/ValidationUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/lib/jakarta.el-api-5.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/lib/jakarta.servlet.jsp.jstl-3.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/lib/jakarta.servlet.jsp.jstl-api-3.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/lib/mysql-connector-j-8.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/lib/protobuf-java-3.25.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/views/admin/admin-dashboard.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/views/auth/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/views/auth/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/views/communities/browse-communities.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/views/communities/community.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/views/courses/view-course.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/views/creator/create-community.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/views/creator/create-course.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/views/creator/creator-dashboard.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/views/includes/footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/views/includes/header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/views/member/member-dashboard.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/views/shared/access-denied.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/views/shared/error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/assets/css/forms.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/assets/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/assets/js/validation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/webapps/nexora/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/work/Catalina/localhost/nexora/org/apache/jsp/WEB_002dINF/views/auth/login_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/work/Catalina/localhost/nexora/org/apache/jsp/WEB_002dINF/views/auth/login_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/work/Catalina/localhost/nexora/org/apache/jsp/WEB_002dINF/views/courses/view_002dcourse_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/work/Catalina/localhost/nexora/org/apache/jsp/WEB_002dINF/views/courses/view_002dcourse_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/work/Catalina/localhost/nexora/org/apache/jsp/WEB_002dINF/views/creator/creator_002ddashboard_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/work/Catalina/localhost/nexora/org/apache/jsp/WEB_002dINF/views/creator/creator_002ddashboard_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/work/Catalina/localhost/nexora/org/apache/jsp/WEB_002dINF/views/includes/footer_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/work/Catalina/localhost/nexora/org/apache/jsp/WEB_002dINF/views/includes/footer_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/work/Catalina/localhost/nexora/org/apache/jsp/WEB_002dINF/views/includes/header_jsp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.tomcat-test/work/Catalina/localhost/nexora/org/apache/jsp/WEB_002dINF/views/includes/header_jsp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/nexora_schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/nexora_schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminDashboardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminDashboardServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CourseViewServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CourseViewServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CreateCommunityServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CreateCommunityServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CreateCourseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CreateCourseServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/CreatorDashboardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/CreatorDashboardServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MaterialDownloadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MaterialDownloadServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MemberDashboardServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MemberDashboardServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/RegisterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/UploadMaterialServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/UploadMaterialServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CommunityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CommunityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CourseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CourseDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/CourseMaterialDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/CourseMaterialDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/EnrollmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/EnrollmentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/filter/AuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/filter/AuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Community.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Community.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/DBConnectionUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/util/DBConnectionUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/admin-dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin/admin-dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/auth/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/communities/browse-communities.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/communities/browse-communities.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/communities/community.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/communities/community.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/view-course.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courses/view-course.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/creator/create-community.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/creator/create-community.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/creator/create-course.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/creator/create-course.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/creator/creator-dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/creator/creator-dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/includes/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/member-dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/member/member-dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/access-denied.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/access-denied.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shared/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/forms.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/AdminDashboardServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/AdminDashboardServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/CourseViewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CourseViewServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/CreateCommunityServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CreateCommunityServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/CreateCourseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CreateCourseServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/CreatorDashboardServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/CreatorDashboardServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/MaterialDownloadServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/MaterialDownloadServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/MemberDashboardServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/MemberDashboardServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/RegisterServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/controller/UploadMaterialServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/UploadMaterialServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/CommunityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/CommunityDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/CourseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/CourseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/CourseMaterialDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/CourseMaterialDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/EnrollmentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/EnrollmentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/filter/AuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Community.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Community.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Course.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/DBConnectionUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/util/DBConnectionUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/AdminDashboardServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/AdminDashboardServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/CourseViewServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/CourseViewServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/CreateCommunityServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/CreateCommunityServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/CreateCourseServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/CreateCourseServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/CreatorDashboardServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/CreatorDashboardServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/LoginServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/LoginServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/MaterialDownloadServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/MaterialDownloadServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/MemberDashboardServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/MemberDashboardServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/RegisterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/RegisterServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/UploadMaterialServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/controller/UploadMaterialServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/CommunityDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/CommunityDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/CourseDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/CourseDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/CourseMaterialDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/CourseMaterialDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/EnrollmentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/EnrollmentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/filter/AuthFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/filter/AuthFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/model/Community.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/model/Community.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/model/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/model/Course.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/service/AuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/service/AuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/util/DBConnectionUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/classes/util/DBConnectionUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/admin/admin-dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/admin/admin-dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/auth/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/auth/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/auth/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/auth/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/communities/browse-communities.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/communities/browse-communities.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/communities/community.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/communities/community.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/courses/view-course.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/courses/view-course.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/creator/create-community.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/creator/create-community.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/creator/create-course.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/creator/create-course.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/creator/creator-dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/creator/creator-dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/includes/header.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/includes/header.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/member/member-dashboard.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/member/member-dashboard.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/shared/access-denied.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/shared/access-denied.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/shared/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/views/shared/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/assets/css/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/assets/css/forms.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/nexora-1.0-SNAPSHOT/assets/css/main.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CopilotChats">
+    <option name="panelChat">
+      <chat>
+        <option name="activeSessionId" value="7c61dfa0-ea8d-49a8-a9e5-0769b7e629c4" />
+        <option name="sessions">
+          <session>
+            <option name="chatType" value="PANEL" />
+            <option name="id" value="7c61dfa0-ea8d-49a8-a9e5-0769b7e629c4" />
+            <option name="modeId" value="Ask" />
+            <option name="modelType" value="builtin_family" />
+            <option name="modelValue" value="auto" />
+            <option name="targetType" value="LOCAL" />
+          </session>
+        </option>
+        <option name="type" value="PANEL" />
+      </chat>
+    </option>
+  </component>
+  <component name="CopilotPersistence">
+    <persistenceIdMap>
+      <entry key="_C:/Users/thebrownguy/Desktop/Nigam/working/Nexora" value="3Dmfki8NVCuJmOuIFvQePRV5eWS" />
+    </persistenceIdMap>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;neeygaam23&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/neeygaam23/nexora.git&quot;,
+    &quot;accountId&quot;: &quot;03f25cb9-44c7-40c9-9123-1f322ed56d6f&quot;
+  }
+}</component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="3Dmfki8NVCuJmOuIFvQePRV5eWS" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Tomcat Server.Tomcat 11.0.18.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.53333336&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunDashboard">
+    <option name="configurationStatuses">
+      <map>
+        <entry key="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+          <value>
+            <map>
+              <entry key="Tomcat 11.0.18" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 11.0.18" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 11.0.18" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="nexora:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="9738960c-64c1-4e0f-9c19-5fe5c73fe363" />
+        <option name="HTTP_PORT" value="8089" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49316" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="nexora:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.30387.90" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.30387.90" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5cd869d3-0efc-4aea-b912-ae0851670025" name="Changes" comment="" />
+      <created>1778892313388</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1778892313388</updated>
+      <workItem from="1778892315748" duration="207000" />
+      <workItem from="1778918374703" duration="681000" />
+      <workItem from="1778920100429" duration="195000" />
+      <workItem from="1778920946672" duration="659000" />
+      <workItem from="1778947022423" duration="717000" />
+      <workItem from="1778948219059" duration="129000" />
+      <workItem from="1778982352700" duration="3487000" />
+      <workItem from="1778988574521" duration="992000" />
+      <workItem from="1778997061420" duration="233000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="github-copilot-workspace">
+    <instructionFileLocations>
+      <option value=".github/instructions" />
+    </instructionFileLocations>
+    <promptFileLocations>
+      <option value=".github/prompts" />
+    </promptFileLocations>
+  </component>
+</project>

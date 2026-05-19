@@ -5,6 +5,7 @@ import dao.CourseMaterialDao;
 import dao.CommunityMemberDao;
 import dao.EnrollmentDao;
 import dao.FollowDao;
+import dao.ProgressDao;
 import model.Course;
 import model.User;
 
@@ -24,6 +25,7 @@ public class CourseViewServlet extends HttpServlet {
     private CommunityMemberDao memberDao = new CommunityMemberDao();
     private EnrollmentDao enrollmentDao = new EnrollmentDao();
     private FollowDao followDao = new FollowDao();
+    private ProgressDao progressDao = new ProgressDao();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -55,10 +57,17 @@ public class CourseViewServlet extends HttpServlet {
             List<String[]> materials = materialDao.listByCourse(courseId);
             req.setAttribute("course", course);
             req.setAttribute("materials", materials);
+            req.setAttribute("totalMaterials", materials.size());
             boolean canUpload = current != null && current.getId() == course.getCreatorId();
             req.setAttribute("canUpload", canUpload);
             boolean isEnrolled = current != null && enrollmentDao.isEnrolled(courseId, current.getId());
             req.setAttribute("isEnrolled", isEnrolled);
+            if (isEnrolled) {
+                int enrollmentId = enrollmentDao.findEnrollmentId(courseId, current.getId());
+                req.setAttribute("completedCount", progressDao.countCompleted(enrollmentId));
+            } else {
+                req.setAttribute("completedCount", 0);
+            }
             req.getRequestDispatcher("/WEB-INF/views/courses/view-course.jsp").forward(req, resp);
         } catch (SQLException e) {
             throw new ServletException(e);

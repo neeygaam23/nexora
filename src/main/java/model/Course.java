@@ -7,6 +7,8 @@ public class Course {
     private int communityId;
     private String title;
     private String description;
+    private boolean isPaid;
+    private double price;
     private int creatorId;
     private Timestamp createdAt;
 
@@ -40,6 +42,22 @@ public class Course {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public boolean isPaid() {
+        return isPaid;
+    }
+
+    public void setPaid(boolean paid) {
+        isPaid = paid;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     public int getCreatorId() {

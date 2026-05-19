@@ -28,6 +28,11 @@ public class CreateCommunityServlet extends HttpServlet {
             resp.sendRedirect(req.getContextPath() + "/login");
             return;
         }
+        if (!"CREATOR".equalsIgnoreCase(u.getRoleName()) &&
+                !"ADMIN".equalsIgnoreCase(u.getRoleName())) {
+            resp.sendError(HttpServletResponse.SC_FORBIDDEN);
+            return;
+        }
 
         String name = req.getParameter("name");
         String description = req.getParameter("description");

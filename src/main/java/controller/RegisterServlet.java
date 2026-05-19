@@ -43,6 +43,13 @@ public class RegisterServlet extends HttpServlet {
             return;
         }
 
+        String chosenRole = req.getParameter("role");
+        if (chosenRole == null || (!chosenRole.equalsIgnoreCase("MEMBER") && !chosenRole.equalsIgnoreCase("CREATOR"))) {
+            req.setAttribute("errors", List.of("Please select a valid role: Member or Creator."));
+            req.getRequestDispatcher("/WEB-INF/views/auth/register.jsp").forward(req, resp);
+            return;
+        }
+
         try {
             Optional<User> byUsername = userDao.findByUsername(username);
             if (byUsername.isPresent()) {
@@ -65,7 +72,11 @@ public class RegisterServlet extends HttpServlet {
             u.setEmail(email);
             u.setPasswordHash(stored);
             u.setFullName(fullName);
-            u.setRoleId(3); // default to MEMBER; ensure roles table matches (1=ADMIN,2=CREATOR,3=MEMBER)
+            int roleId = 3; // default MEMBER
+            if ("CREATOR".equalsIgnoreCase(chosenRole)) {
+                roleId = 2;
+            }
+            u.setRoleId(roleId);
 
             int newId = userDao.createUser(u);
             if (newId > 0) {

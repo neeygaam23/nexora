@@ -13,6 +13,9 @@ public class User implements Serializable {
     private String passwordHash;
     private int roleId;
     private String fullName;
+    private String profilePicture;
+    private String bio;
+    private boolean isActive;
     private Timestamp createdAt;
     private String roleName; // e.g., ADMIN, CREATOR, MEMBER
 
@@ -63,6 +66,30 @@ public class User implements Serializable {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    public String getProfilePicture() {
+        return profilePicture;
+    }
+
+    public void setProfilePicture(String profilePicture) {
+        this.profilePicture = profilePicture;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    public void setActive(boolean active) {
+        isActive = active;
     }
 
     public Timestamp getCreatedAt() {

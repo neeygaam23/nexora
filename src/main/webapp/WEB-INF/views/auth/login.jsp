@@ -6,21 +6,28 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <title>Login - Nexora</title>
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/main.css" />
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/assets/css/forms.css" />
+        <%@ include file="../includes/styles.jspf" %>
     </head>
 
     <body class="auth-page">
         <main>
             <section class="form-card">
+                <p class="status-pill">Welcome back</p>
                 <h2>Login</h2>
+                <p class="muted">Sign in to continue learning, creating, and managing your communities.</p>
                 <c:if test="${param.registered == '1'}">
                     <p class="success">Registration successful. Please login.</p>
                 </c:if>
 
                 <form method="post" action="${pageContext.request.contextPath}/login">
-                    <label>Username: <input type="text" name="username" required /></label>
-                    <label>Password: <input type="password" name="password" required /></label>
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input id="username" type="text" name="username" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" name="password" required />
+                    </div>
                     <div class="form-actions">
                         <a href="${pageContext.request.contextPath}/register" class="secondary-link">Create an
                             account</a>

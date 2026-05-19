@@ -6,6 +6,9 @@ public class Community {
     private int id;
     private String name;
     private String description;
+    private String category;
+    private String bannerImage;
+    private boolean isPrivate;
     private int creatorId;
     private Timestamp createdAt;
 
@@ -31,6 +34,30 @@ public class Community {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getBannerImage() {
+        return bannerImage;
+    }
+
+    public void setBannerImage(String bannerImage) {
+        this.bannerImage = bannerImage;
+    }
+
+    public boolean isPrivate() {
+        return isPrivate;
+    }
+
+    public void setPrivate(boolean aPrivate) {
+        isPrivate = aPrivate;
     }
 
     public int getCreatorId() {

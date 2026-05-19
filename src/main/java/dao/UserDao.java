@@ -4,6 +4,8 @@ import model.User;
 import util.DBConnectionUtil;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -11,8 +13,47 @@ import java.util.Optional;
  */
 public class UserDao {
 
+    public List<User> listAll() throws SQLException {
+        String sql = "SELECT u.*, r.name AS role_name FROM users u JOIN roles r ON u.role_id = r.id ORDER BY u.created_at DESC";
+        List<User> users = new ArrayList<>();
+        try (Connection conn = DBConnectionUtil.getConnection();
+                PreparedStatement ps = conn.prepareStatement(sql);
+                ResultSet rs = ps.executeQuery()) {
+            while (rs.next()) {
+                users.add(mapRowToUser(rs));
+            }
+        }
+        return users;
+    }
+
+    public void deactivate(int userId) throws SQLException {
+        String sql = "UPDATE users SET is_active = ? WHERE id = ?";
+        try (Connection conn = DBConnectionUtil.getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setBoolean(1, false);
+            ps.setInt(2, userId);
+            ps.executeUpdate();
+        }
+    }
+
+    public void delete(int userId) throws SQLException {
+        String sql = "DELETE FROM users WHERE id = ?";
+        try (Connection conn = DBConnectionUtil.getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setInt(1, userId);
+            ps.executeUpdate();
+        }
+    }
+
+    public void updateRole(int userId, int roleId) throws SQLException {
+        String sql = "UPDATE users SET role_id = ? WHERE id = ?";
+        try (Connection conn = DBConnectionUtil.getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setInt(1, roleId);
+            ps.setInt(2, userId);
+            ps.executeUpdate();
+        }
+    }
+
     // Find user by username and include role name
-    public static Optional<User> findByUsername(String username) throws SQLException {
+    public Optional<User> findByUsername(String username) throws SQLException {
         String sql = "SELECT u.*, r.name AS role_name FROM users u JOIN roles r ON u.role_id = r.id WHERE u.username = ?";
         try (Connection conn = DBConnectionUtil.getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
             ps.setString(1, username);
@@ -64,7 +105,7 @@ public class UserDao {
     }
 
     // Helper to map a ResultSet row to User
-    private static User mapRowToUser(ResultSet rs) throws SQLException {
+    private User mapRowToUser(ResultSet rs) throws SQLException {
         User u = new User();
         u.setId(rs.getInt("id"));
         u.setUsername(rs.getString("username"));

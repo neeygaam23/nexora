@@ -2,18 +2,28 @@
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
         <jsp:include page="/WEB-INF/views/includes/header.jsp" />
 
-        <div class="container auth-page">
-            <h1>Create Community</h1>
-            <form method="post">
-                <label>Name</label>
-                <input name="name" required />
-                <label>Description</label>
-                <textarea name="description"></textarea>
-                <div class="form-actions">
-                    <button type="submit">Create</button>
-                    <a class="secondary-link" href="${pageContext.request.contextPath}/creator/dashboard">Cancel</a>
-                </div>
-            </form>
-        </div>
+        <main class="page-frame">
+            <section class="page-hero">
+                <h1>Create Community</h1>
+                <p class="lede">Set up a new space for your audience and start organizing content around it.</p>
+            </section>
+
+            <section class="section-card">
+                <form method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description"></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="submit">Create</button>
+                        <a class="secondary-link" href="${pageContext.request.contextPath}/creator/dashboard">Cancel</a>
+                    </div>
+                </form>
+            </section>
+        </main>
 
         <jsp:include page="/WEB-INF/views/includes/footer.jsp" />

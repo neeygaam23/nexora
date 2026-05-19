@@ -39,7 +39,8 @@ public class LoginServlet extends HttpServlet {
         }
 
         try {
-            Optional<User> opt = UserDao.findByUsername(username);
+            UserDao userDao = new UserDao();
+            Optional<User> opt = userDao.findByUsername(username);
             if (opt.isPresent()) {
                 User user = opt.get();
                 boolean ok = PasswordUtil.verifyPassword(password, user.getPasswordHash());

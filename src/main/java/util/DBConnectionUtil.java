@@ -10,9 +10,9 @@ import java.sql.SQLException;
  * Uses basic DriverManager; can be extended to a connection pool.
  */
 public class DBConnectionUtil {
-    private static final String URL = "jdbc:mysql://localhost:3306/nexora?useSSL=false&serverTimezone=UTC";
-    private static final String USER = "root";
-    private static final String PASS = "1234";
+    private static String url;
+    private static String user;
+    private static String pass;
 
     static {
         try {
@@ -22,7 +22,13 @@ public class DBConnectionUtil {
         }
     }
 
+    public static void init(String url, String user, String pass) {
+        DBConnectionUtil.url = url;
+        DBConnectionUtil.user = user;
+        DBConnectionUtil.pass = pass;
+    }
+
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection(URL, USER, PASS);
+        return DriverManager.getConnection(url, user, pass);
     }
 }

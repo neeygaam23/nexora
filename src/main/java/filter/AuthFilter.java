@@ -29,9 +29,10 @@ public class AuthFilter implements Filter {
         HttpServletResponse resp = (HttpServletResponse) response;
         String path = req.getRequestURI().substring(req.getContextPath().length());
 
-        // Allow static resources and public auth pages
-        if (path.startsWith("/assets/") || path.startsWith("/login") || path.startsWith("/register")
-                || path.startsWith("/access-denied")
+        // Allow static resources and public pages
+        if (path.equals("/") || path.startsWith("/home") || path.startsWith("/index.jsp")
+                || path.startsWith("/assets/") || path.startsWith("/login") || path.startsWith("/register")
+                || path.startsWith("/access-denied") || path.startsWith("/communities")
                 || path.startsWith("/css/") || path.startsWith("/js/")) {
             chain.doFilter(request, response);
             return;
@@ -51,7 +52,8 @@ public class AuthFilter implements Filter {
             resp.sendRedirect(req.getContextPath() + "/access-denied");
             return;
         }
-        if (path.startsWith("/creator") && !("CREATOR".equalsIgnoreCase(role) || "ADMIN".equalsIgnoreCase(role))) {
+        if (path.startsWith("/creator") && !("CREATOR".equalsIgnoreCase(role)
+                || "ADMIN".equalsIgnoreCase(role))) {
             resp.sendRedirect(req.getContextPath() + "/access-denied");
             return;
         }
