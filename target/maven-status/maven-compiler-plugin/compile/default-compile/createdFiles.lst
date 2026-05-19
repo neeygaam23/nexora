@@ -9,6 +9,7 @@ controller\PostServlet.class
 dao\FollowDao.class
 dao\CommentDao.class
 dao\CommunityDao.class
+controller\CoursePurchaseServlet.class
 model\Course.class
 util\DBSchemaPatcher.class
 controller\MaterialDownloadServlet.class
@@ -18,6 +19,7 @@ dao\PostDao.class
 controller\DeleteCourseServlet.class
 controller\CreateCourseServlet.class
 model\User.class
+dao\PostReactionDao.class
 controller\AccessDeniedServlet.class
 controller\AuthServlet.class
 controller\AdminManageCoursesServlet.class
@@ -31,6 +33,7 @@ controller\LogoutServlet.class
 util\DBConfigListener.class
 controller\RegisterServlet.class
 model\Comment.class
+controller\BrowseCoursesServlet.class
 model\Community.class
 util\ValidationUtil.class
 filter\AuthFilter.class
@@ -38,6 +41,7 @@ controller\CommunityListServlet.class
 controller\UnenrollCourseServlet.class
 controller\AdminManageCommunitiesServlet.class
 dao\CourseMaterialDao.class
+controller\PostReactionServlet.class
 controller\LeaveCommunityServlet.class
 util\DBConnectionUtil.class
 controller\LoginServlet.class
@@ -50,3 +54,4 @@ dao\ProgressDao.class
 controller\CommunityViewServlet.class
 dao\CourseDao.class
 controller\AdminManageUsersServlet.class
+controller\HomeServlet.class

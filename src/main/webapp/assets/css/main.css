@@ -75,49 +75,63 @@ main {
 
 .site-header {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 0.9rem;
-    padding: 0.9rem 1rem;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.2rem;
     background: linear-gradient(90deg, #0f2140 0%, var(--accent) 100%);
     color: #fff;
     box-shadow: 0 8px 24px rgba(15, 33, 64, 0.24);
+    flex-wrap: nowrap;
+    min-height: 64px;
+}
+
+.site-header .brand {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    flex: 0 0 auto;
 }
 
 .site-header .brand a {
     color: #fff;
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: 0.3px;
     text-decoration: none;
 }
 
 .main-nav {
-    flex: 1;
+    flex: 1 1 auto;
+    margin-left: 0.5rem;
+    min-width: 0;
 }
 
 .main-nav ul {
     list-style: none;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 0.55rem;
+    gap: 1rem;
     margin: 0;
     padding: 0;
+    flex-wrap: nowrap;
+    overflow: hidden;
 }
 
 .main-nav .spacer {
-    flex: 1;
+    flex: 1 1 auto;
+    min-width: 1rem;
 }
 
 .main-nav a {
     display: inline-flex;
     align-items: center;
-    padding: 0.48rem 0.7rem;
-    border-radius: 8px;
+    padding: 0.56rem 0.9rem;
+    border-radius: 10px;
     color: rgba(255, 255, 255, 0.97);
     text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.15s ease, transform 0.15s ease;
+    white-space: nowrap;
 }
 
 .main-nav a:hover {
@@ -125,9 +139,40 @@ main {
     transform: translateY(-1px);
 }
 
+/* Responsive behavior: allow wrapping on small screens */
+@media (max-width: 860px) {
+    .site-header {
+        flex-wrap: wrap;
+        padding: 0.75rem 0.9rem;
+    }
+
+    .main-nav {
+        width: 100%;
+        order: 3;
+        margin-left: 0;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .main-nav .spacer {
+        display: none;
+    }
+
+    .site-header .brand a {
+        font-size: 1.05rem;
+    }
+
+    .main-nav a {
+        padding: 0.45rem 0.7rem;
+    }
+}
+
 .main-nav .welcome {
     color: rgba(255, 255, 255, 0.88);
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
 }
 
 .site-header,
