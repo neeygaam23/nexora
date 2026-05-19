@@ -6,7 +6,6 @@
 
 <main class="page-frame">
 
-    <!-- Community information banner -->
     <section class="page-hero">
 
         <!-- Community title -->
@@ -24,7 +23,6 @@
                 <!-- Logged in user -->
                 <c:when test="${not empty sessionScope.currentUser}">
 
-                    <!-- Check if current user is already a member -->
                     <c:choose>
 
                         <!-- User is already a member -->
@@ -34,12 +32,10 @@
                             <form method="post"
                                   action="${pageContext.request.contextPath}/communities/leave">
 
-                                <!-- Hidden field to send community ID -->
                                 <input type="hidden"
                                        name="community_id"
                                        value="${community.id}" />
 
-                                <!-- Leave button -->
                                 <button type="submit" class="btn secondary-btn">
                                     Leave Community
                                 </button>
@@ -47,14 +43,11 @@
 
                         </c:when>
 
-                        <!-- User is not a member -->
                         <c:otherwise>
 
-                            <!-- Join community form -->
                             <form method="post"
                                   action="${pageContext.request.contextPath}/communities/join">
 
-                                <!-- Hidden field for selected community -->
                                 <input type="hidden"
                                        name="community_id"
                                        value="${community.id}" />
@@ -68,7 +61,7 @@
                         </c:otherwise>
                     </c:choose>
 
-                    <!-- Link to community discussions -->
+                    <!-- Link -->
                     <a href="${pageContext.request.contextPath}/communities/posts?community_id=${community.id}"
                        class="btn secondary-btn">
                         View Discussions
@@ -79,13 +72,13 @@
                 <!-- Guest user section -->
                 <c:otherwise>
 
-                    <!-- Redirect user to login page -->
+                   
                     <a href="${pageContext.request.contextPath}/login"
                        class="btn">
                         Login to Join
                     </a>
 
-                    <!-- Redirect user to registration page -->
+                    
                     <a href="${pageContext.request.contextPath}/register"
                        class="btn secondary-btn">
                         Create Account
