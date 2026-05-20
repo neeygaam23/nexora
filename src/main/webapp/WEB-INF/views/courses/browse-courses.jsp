@@ -18,6 +18,13 @@
                         <h2 class="resource-title">${course.title}</h2>
                         <p>${course.description}</p>
                         <p class="resource-meta"><strong>Community:</strong> ${communityNames[course.communityId]}</p>
+                        <p class="resource-meta">
+                            <strong>Price:</strong>
+                            <c:choose>
+                                <c:when test="${course.paid}">NPR ${course.price}</c:when>
+                                <c:otherwise>Free</c:otherwise>
+                            </c:choose>
+                        </p>
                         <a class="btn primary-btn"
                             href="${pageContext.request.contextPath}/courses/view?course_id=${course.id}">
                             View Course

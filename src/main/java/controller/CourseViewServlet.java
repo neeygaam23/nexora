@@ -39,6 +39,7 @@ public class CourseViewServlet extends HttpServlet {
 
             User current = (User) req.getSession().getAttribute("currentUser");
             boolean allowed = false;
+            boolean isEnrolled = false;
             if (current != null) {
                 if (current.getId() == course.getCreatorId())
                     allowed = true;
@@ -48,6 +49,7 @@ public class CourseViewServlet extends HttpServlet {
                     allowed = true;
                 else if (followDao.isFollowing(current.getId(), course.getCreatorId()))
                     allowed = true;
+                isEnrolled = enrollmentDao.isEnrolled(courseId, current.getId());
             }
             if (!allowed) {
                 resp.sendError(HttpServletResponse.SC_FORBIDDEN);
@@ -60,8 +62,16 @@ public class CourseViewServlet extends HttpServlet {
             req.setAttribute("totalMaterials", materials.size());
             boolean canUpload = current != null && current.getId() == course.getCreatorId();
             req.setAttribute("canUpload", canUpload);
-            boolean isEnrolled = current != null && enrollmentDao.isEnrolled(courseId, current.getId());
             req.setAttribute("isEnrolled", isEnrolled);
+            boolean canAccessMaterials = current != null && (current.getId() == course.getCreatorId() || isEnrolled);
+            req.setAttribute("canAccessMaterials", canAccessMaterials);
+            boolean canPurchase = current != null && course.isPaid() && !isEnrolled
+                    && current.getId() != course.getCreatorId();
+            req.setAttribute("canPurchase", canPurchase);
+            req.setAttribute("isPaidCourse", course.isPaid());
+            if ("success".equalsIgnoreCase(req.getParameter("payment"))) {
+                req.setAttribute("purchaseSuccess", "eSewa payment simulated successfully.");
+            }
             if (isEnrolled) {
                 int enrollmentId = enrollmentDao.findEnrollmentId(courseId, current.getId());
                 req.setAttribute("completedCount", progressDao.countCompleted(enrollmentId));

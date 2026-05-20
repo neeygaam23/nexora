@@ -2,8 +2,6 @@ package controller;
 
 import dao.CourseMaterialDao;
 import dao.CourseDao;
-import dao.CommunityMemberDao;
-import dao.FollowDao;
 import dao.EnrollmentDao;
 import model.Course;
 import model.User;
@@ -50,10 +48,6 @@ public class MaterialDownloadServlet extends HttpServlet {
                         if (current.getId() == course.getCreatorId())
                             allowed = true;
                         else if (enrollmentDao.isEnrolled(courseId, current.getId()))
-                            allowed = true;
-                        else if (new CommunityMemberDao().isMember(course.getCommunityId(), current.getId()))
-                            allowed = true;
-                        else if (new FollowDao().isFollowing(current.getId(), course.getCreatorId()))
                             allowed = true;
                     }
                 }
