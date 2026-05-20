@@ -36,6 +36,7 @@ public class MemberDashboardServlet extends HttpServlet {
                     enrolledCourses.add(course);
                 }
             }
+            
             req.setAttribute("enrolledCourses", enrolledCourses);
 
             req.getRequestDispatcher("/WEB-INF/views/member/member-dashboard.jsp").forward(req, resp);
