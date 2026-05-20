@@ -50,7 +50,7 @@
                     <input id="password" type="password" name="password" required />
                 </div>
 
-                
+
                 <!-- form actions -->
                 <div class="form-actions">
 
@@ -79,7 +79,7 @@
             </c:if>
 
         </section>
-
+        
     </main>
 
 </body>
