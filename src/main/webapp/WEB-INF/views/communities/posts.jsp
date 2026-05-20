@@ -2,35 +2,35 @@
 
 <main class="page-frame">
 
-    <!-- Page heading section -->
+    <!-- page title section -->
     <section class="page-hero">
 
-        <!-- Main page title -->
+        <!-- heading -->
         <h1>Community Discussions</h1>
 
-        <!-- Short introduction text -->
+        <!-- short intro -->
         <p class="lede">
             Start a post, react to updates, and keep the conversation moving.
         </p>
     </section>
 
-    <!-- Section for creating a new discussion post -->
+    <!-- create post section -->
     <section class="section-card">
 
         <div class="section-header">
             <h2>Create New Post</h2>
         </div>
 
-        <!-- Form used to submit a new post -->
+        <!-- form to submit a new post -->
         <form method="post"
               action="${pageContext.request.contextPath}/communities/posts">
 
-            <!-- Store current community ID -->
+            <!-- hidden community id -->
             <input type="hidden"
                    name="community_id"
                    value="${communityId}" />
 
-            <!-- Post title input -->
+            <!-- title input -->
             <div class="form-group">
                 <label for="title">Title</label>
 
@@ -40,7 +40,7 @@
                        required />
             </div>
 
-            <!-- Post body input -->
+            <!-- body input -->
             <div class="form-group">
                 <label for="body">Body</label>
 
@@ -50,83 +50,83 @@
                           required></textarea>
             </div>
 
-            <!-- Submit post button -->
+            <!-- submit button -->
             <button type="submit" class="btn primary-btn">
                 Create Post
             </button>
         </form>
     </section>
 
-    <!-- Section that displays all discussion posts -->
+    <!-- posts section -->
     <section class="section-card">
 
         <div class="section-header">
             <h2>Posts</h2>
         </div>
 
-        <!-- Check whether posts exist -->
+        <!-- check if posts exist -->
         <c:choose>
 
-            <!-- Posts are available -->
+            <!-- when posts are available -->
             <c:when test="${not empty posts}">
 
                 <div class="card-grid">
 
-                    <!-- Loop through all posts -->
+                    <!-- loop through each post -->
                     <c:forEach var="post" items="${posts}">
 
-                        <!-- Individual post card -->
+                        <!-- single post container -->
                         <div class="post-card">
 
                             <div class="card-content">
 
-                                <!-- Post title -->
+                                <!-- post title -->
                                 <h3>${post.title}</h3>
 
-                                <!-- Post body -->
+                                <!-- post content -->
                                 <p>${post.body}</p>
 
-                                <!-- Author information -->
+                                <!-- author details -->
                                 <p>
                                     <strong>Author ID:</strong>
                                     ${post.authorId}
                                 </p>
 
-                                <!-- Post creation date -->
+                                <!-- creation time -->
                                 <p>
                                     <strong>Created:</strong>
                                     ${post.createdAt}
                                 </p>
 
-                                <!-- Like and unlike section -->
+                                <!-- like/unlike section -->
                                 <div class="reaction-bar">
 
-                                    <!-- Reaction form -->
+                                    <!-- reaction form -->
                                     <form method="post"
                                           action="${pageContext.request.contextPath}/posts/reaction">
 
-                                        <!-- Current post ID -->
+                                        <!-- post id -->
                                         <input type="hidden"
                                                name="post_id"
                                                value="${post.id}" />
 
-                                        <!-- Current community ID -->
+                                        <!-- community id -->
                                         <input type="hidden"
                                                name="community_id"
                                                value="${communityId}" />
 
-                                        <!-- Toggle like/unlike button -->
+                                        <!-- like/unlike button -->
                                         <button type="submit"
                                                 class="btn secondary-btn">
 
                                             <c:choose>
 
-                                                <!-- If user already liked the post -->
+                                                <!-- if already liked -->
                                                 <c:when test="${userLikedMap[post.id]}">
                                                     Unlike
                                                 </c:when>
 
-                                                <!-- If user has not liked the post -->
+                                                <!-- if not liked -->
                                                 <c:otherwise>
                                                     Like
                                                 </c:otherwise>
@@ -135,34 +135,34 @@
                                         </button>
                                     </form>
 
-                                    <!-- Total reaction count -->
+                                    <!-- total likes -->
                                     <span>
                                         <strong>${reactionCountsMap[post.id]}</strong>
                                         likes
                                     </span>
                                 </div>
 
-                                <!-- Comment display section -->
+                                <!-- comments section -->
                                 <div class="comments-section">
 
                                     <h4>Comments</h4>
 
                                     <c:choose>
 
-                                        <!-- Comments available -->
+                                        <!-- if comments exist -->
                                         <c:when test="${not empty commentsMap[post.id]}">
 
-                                            <!-- Loop through comments -->
+                                            <!-- loop comments -->
                                             <c:forEach var="comment"
                                                        items="${commentsMap[post.id]}">
 
-                                                <!-- Single comment block -->
+                                                <!-- single comment -->
                                                 <div class="comment-bubble">
 
-                                                    <!-- Comment text -->
+                                                    <!-- comment text -->
                                                     <p>${comment.body}</p>
 
-                                                    <!-- Comment timestamp -->
+                                                    <!-- comment time -->
                                                     <small>
                                                         Posted: ${comment.createdAt}
                                                     </small>
@@ -172,7 +172,7 @@
 
                                         </c:when>
 
-                                        <!-- No comments available -->
+                                        <!-- if no comments -->
                                         <c:otherwise>
 
                                             <p>
@@ -184,21 +184,21 @@
                                     </c:choose>
                                 </div>
 
-                                <!-- Form for adding new comments -->
+                                <!-- add comment form -->
                                 <form method="post"
                                       action="${pageContext.request.contextPath}/posts/comment">
 
-                                    <!-- Hidden post ID -->
+                                    <!-- post id -->
                                     <input type="hidden"
                                            name="post_id"
                                            value="${post.id}" />
 
-                                    <!-- Hidden community ID -->
+                                    <!-- community id -->
                                     <input type="hidden"
                                            name="community_id"
                                            value="${communityId}" />
 
-                                    <!-- Comment text area -->
+                                    <!-- comment input -->
                                     <div class="form-group">
 
                                         <label for="comment-${post.id}">
@@ -211,7 +211,7 @@
                                                   required></textarea>
                                     </div>
 
-                                    <!-- Comment submit button -->
+                                    <!-- submit comment -->
                                     <button type="submit"
                                             class="btn secondary-btn">
                                         Comment
@@ -226,7 +226,7 @@
 
             </c:when>
 
-            <!-- No posts available -->
+            <!-- when no posts exist -->
             <c:otherwise>
 
                 <div class="empty-state">
