@@ -50,6 +50,7 @@
                     <input id="password" type="password" name="password" required />
                 </div>
 
+                
                 <!-- form actions -->
                 <div class="form-actions">
 
@@ -57,6 +58,7 @@
                     <a href="${pageContext.request.contextPath}/register" class="secondary-link">
                         Create an account
                     </a>
+
 
                     <!-- submit login -->
                     <button type="submit">Login</button>
@@ -66,6 +68,7 @@
             <!-- display login errors if any -->
             <c:if test="${not empty errors}">
                 <div class="error-list">
+
 
                     <!-- loop through all error messages -->
                     <c:forEach var="err" items="${errors}">
